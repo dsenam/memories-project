@@ -1,13 +1,21 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, MainContainer, FormContent } from './styles';
+import Form from '../../components/Form'
+import Posts from '../../components/Posts'
 
 function Home() {
   return (
     <>
       <Container>
-        <h1>Home</h1>
+         <header>
+           <h1>MEMOBOOK</h1>
+         </header>
       </Container>
+      <MainContainer>
+        <Form />      
+        <Posts />
+      </MainContainer>
     </>
   )
 }

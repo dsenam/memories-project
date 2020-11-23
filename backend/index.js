@@ -8,12 +8,14 @@ import postRoutes from './routes/posts.js'
 //instânciando server
 const app = express();
 
-//Middleware para utilização das rotas
-app.use('/posts', postRoutes)
+
 
 app.use(bodyParser.json({limit:"30mb", extended: true }));
 app.use(bodyParser.urlencoded({limit:"30mb", extended: true }));
 app.use(cors());
+
+//Middleware para utilização das rotas
+app.use('/posts', postRoutes)
 
 //criando conexão com o MONGODB
 const CONNECTION_URL = 'mongodb+srv://admin:admin@cluster0.wtfcj.mongodb.net/<dbname>?retryWrites=true&w=majority'

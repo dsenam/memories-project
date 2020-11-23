@@ -7,12 +7,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: white;
+  border-bottom: 1px solid #dcdcdc;
   
 
   h1 {
     color: black;
     font-family: cursive;
     margin-left: 20px;
+    font-size: 18px;
   }
 `;
 

@@ -2,16 +2,17 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 100%;
-  height: 100px;
+  height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  background-color: #a1a2ce;
+  justify-content: space-between;
+  background-color: white;
   
 
   h1 {
-    color: whitesmoke;
+    color: black;
+    font-family: cursive;
+    margin-left: 20px;
   }
 `;
 

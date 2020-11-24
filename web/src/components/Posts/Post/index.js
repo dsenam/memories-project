@@ -11,7 +11,7 @@ function Post({post}) {
   return (
     <>
       <Container>
-        <PostContent>
+        <PostContent key={post.id}>
           <h1>{post.creator}</h1>
           <p>{moment(post.createdAt).fromNow()}</p>        
           <img src={post.selectedFile} alt={post.title}/>

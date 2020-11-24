@@ -16,9 +16,7 @@ function Form() {
     dispatch(createPost(postData))
   }
 
-  const clear = () => {
-
-  }
+  
   return (
      <>
      <Container>
@@ -32,7 +30,6 @@ function Form() {
           <FileBase type="file" multiple={false} onDone={({base64}) => setPostData({...postData, selectedFile:base64})}/>
         </div>
         <button type="submit">ENVIAR</button>
-        <button onClick={clear}>LIMPAR</button>
       </form>
      </Container>
       

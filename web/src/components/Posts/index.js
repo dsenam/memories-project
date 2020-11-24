@@ -6,12 +6,11 @@ import Post from './Post/index'
 function Posts() {
   const posts = useSelector((state)=> state.posts)
 
-  console.log(posts)
   return (
     <>
       <Container>
         {posts.map((post) => (
-          <Post post={post}/>
+            <Post  post={post}/>          
         ))}
       </Container>
     </>

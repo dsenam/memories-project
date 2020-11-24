@@ -2,8 +2,12 @@ import React from 'react';
 import moment from 'moment'
 import { Container, PostContent, Interactions } from './styles';
 import {MdFavoriteBorder, MdClear} from 'react-icons/md'
+import {useDispatch} from 'react-redux'
+
+import {deletePost} from '../../../actions/posts'
 
 function Post({post}) {
+  const dispatch = useDispatch()
   return (
     <>
       <Container>
@@ -20,7 +24,7 @@ function Post({post}) {
               <MdFavoriteBorder />
             </button>
             <button>
-              <MdClear />
+              <MdClear onClick={() => dispatch(deletePost(post._id))} />
             </button>
           </Interactions>
         </PostContent>

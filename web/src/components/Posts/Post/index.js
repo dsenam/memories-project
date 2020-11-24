@@ -4,7 +4,7 @@ import { Container, PostContent, Interactions } from './styles';
 import {MdFavoriteBorder, MdClear} from 'react-icons/md'
 import {useDispatch} from 'react-redux'
 
-import {deletePost} from '../../../actions/posts'
+import {deletePost, likePost} from '../../../actions/posts'
 
 function Post({post}) {
   const dispatch = useDispatch()
@@ -20,7 +20,7 @@ function Post({post}) {
           <article>{post.message}</article>
           <Interactions>
             
-            <button onClick={() => {}}>
+            <button onClick={() => dispatch(likePost(post._id))}>
               <MdFavoriteBorder />
             </button>
             <button>

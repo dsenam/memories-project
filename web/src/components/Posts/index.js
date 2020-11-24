@@ -10,7 +10,9 @@ function Posts() {
   return (
     <>
       <Container>
-        <Post/>
+        {posts.map((post) => (
+          <Post post={post}/>
+        ))}
       </Container>
     </>
   );

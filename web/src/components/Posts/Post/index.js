@@ -1,62 +1,22 @@
 import React from 'react';
-
+import moment from 'moment'
 import { Container, PostContent, Interactions } from './styles';
 import {MdFavoriteBorder, MdClear} from 'react-icons/md'
 
-function Post() {
+function Post({post}) {
   return (
     <>
       <Container>
         <PostContent>
-          <h1>Douglas Sena</h1>
-          <p>1 hora atrás</p>        
-          <img src="https://fotospublicas.com/wp-content/uploads/gravity_forms/11/2020/50621424931_bc1c87da56_k.jpg" alt="Viagens"/>
-          <span>#tags #tags</span>
-          <title>Título da publicação</title>
-          <article>Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens </article>
+          <h1>{post.creator}</h1>
+          <p>{moment(post.createdAt).fromNow()}</p>        
+          <img src={post.selectedFile} alt={post.title}/>
+          <span>{post.tags.map(tag => `#${tag}`)}</span>
+          <title>{post.title}</title>
+          <article>{post.message}</article>
           <Interactions>
             
-            <button>
-              <MdFavoriteBorder />
-            </button>
-            <button>
-              <MdClear />
-            </button>
-          </Interactions>
-        </PostContent>
-      </Container>
-
-      <Container>
-        <PostContent>
-          <h1>Douglas Sena</h1>
-          <p>1 hora atrás</p>        
-          <img src="https://fotospublicas.com/wp-content/uploads/gravity_forms/11/2020/50621424931_bc1c87da56_k.jpg" alt="Viagens"/>
-          <span>#tags #tags</span>
-          <title>Título da publicação</title>
-          <article>Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens </article>
-          <Interactions>
-            
-            <button>
-              <MdFavoriteBorder />
-            </button>
-            <button>
-              <MdClear />
-            </button>
-          </Interactions>
-        </PostContent>
-      </Container>
-
-      <Container>
-        <PostContent>
-          <h1>Douglas Sena</h1>
-          <p>1 hora atrás</p>        
-          <img src="https://fotospublicas.com/wp-content/uploads/gravity_forms/11/2020/50621424931_bc1c87da56_k.jpg" alt="Viagens"/>
-          <span>#tags #tags</span>
-          <title>Título da publicação</title>
-          <article>Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens Viagens </article>
-          <Interactions>
-            
-            <button>
+            <button onClick={() => {}}>
               <MdFavoriteBorder />
             </button>
             <button>
